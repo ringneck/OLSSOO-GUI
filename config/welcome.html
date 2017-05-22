@@ -25,7 +25,7 @@
 	<!--# 한글지원-->
 	<meta charset="utf-8">
 	
-	<title>시스템</title>
+	<title>시스템 요약정보</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 
 	<link href="stylesheets/schwing.css" media="all" rel="Stylesheet" type="text/css" />
@@ -184,7 +184,7 @@
 </head>
 <body>
 	<div class="iframeTitleBar">
-	
+	시스템 요약정보
 		<span class='refresh_icon' onclick="window.location.reload();" >&nbsp;<img src="images/refresh.png" title=" Refresh " border=0 >&nbsp;</span>
 	</div>
 
@@ -206,9 +206,9 @@
 					<table id="trunks_list" class="list">
 					<thead>
 					<tr class="list_titles">
-						<th>Status</th>
-						<th>Trunk</th>
-						<th>Type</th>
+						<th>상태</th>
+						<th>트렁크</th>
+						<th>타입</th>
 						<th>Username</th>
 						<th>Port/Hostname/IP</th>
 					</tr>
@@ -227,14 +227,14 @@
 				<div class="clear"></div>
 				<div class="body">
 					<span id="legend">
-						<img src="images/status_green.png" border="0"> Free 
-						<img src="images/status_orange.png" border="0"> Ringing 
-						<img src="images/status_red.png" border="0"> Busy 
-						<img src="images/status_gray.png" border="0"> UnAvailable 
+						<img src="images/status_green.png" border="0"> 대기중 
+						<img src="images/status_orange.png" border="0"> 링잉중 
+						<img src="images/status_red.png" border="0"> 통화중 
+						<img src="images/status_gray.png" border="0"> 통화불가 
 					</span>
 					<div id="extensions_sections">
-						<span title="all" class="section active"> All </span>
-						<span title="analog" class="section"> Analog </span>
+						<span title="all" class="section active"> 전체 </span>
+						<span title="analog" class="section"> 아날로그 </span>
 						<span title="feature" class="section"> Features </span>
 						<span title="iax" class="section"> IAX </span>
 						<span title="sip" class="section"> SIP </span>
@@ -244,10 +244,10 @@
 					<thead>
 					<tr class="list_titles">
 						<th></th>
-						<th>Extension</th>
+						<th>내선번호</th>
 						<th>Name/Label</th>
-						<th>Status</th>
-						<th>Type</th>
+						<th>상태</th>
+						<th>타입</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -380,26 +380,26 @@
 				<div class="clear"></div>
 				<div class="body">
 					<ul class="ui-tabs-nav">
-						<li><a href="#info_general"><span>General</span></a></li>
-						<li><a href="#info_network"><span>Network</span></a></li>
-						<li><a href="#info_memory"><span>Memory</span></a></li>
-						<li><a href="#info_disk"><span>Disk</span></a></li>
+						<li><a href="#info_general"><span>일반</span></a></li>
+						<li><a href="#info_network"><span>네트워크</span></a></li>
+						<li><a href="#info_memory"><span>메모리</span></a></li>
+						<li><a href="#info_disk"><span>디스크</span></a></li>
 					</ul>
 					<div id="info_general" class="ui-tabs-panel">
-						<B>Hostname:</B> <div id="hostname" style="font-family:courier; font-size:10pt;"></div><BR>
-						<B>OS Version:</B> <div id="osversion" style="font-family:courier; font-size:10pt;"></div><BR>
-						<B>Asterisk Build:</B> <div id="asterisk" style="font-family:courier; font-size:10pt;"></div><BR>
+						<B>호스트네임:</B> <div id="hostname" style="font-family:courier; font-size:10pt;"></div><BR>
+						<B>OS 버젼:</B> <div id="osversion" style="font-family:courier; font-size:10pt;"></div><BR>
+						<B>Asterisk 빌드:</B> <div id="asterisk" style="font-family:courier; font-size:10pt;"></div><BR>
 						<B>Server Date & Timezone</B> <div id="today" style="font-family:courier; font-size:10pt;"></div><BR>
-						<B>Uptime:</B> <div id="uptime" style="font-family:courier; font-size:10pt;"></div><BR>
+						<B>업타임:</B> <div id="uptime" style="font-family:courier; font-size:10pt;"></div><BR>
 					</div>
 					<div id="info_network" class="ui-tabs-panel">
 						<div id="ifconfig" style="font-family:courier; font-size:9pt;overflow :auto;"></div>
 					</div>
 					<div id="info_memory" class="ui-tabs-panel">
-						<B>Memory Usage:</B><div id="memoryusage" style="font-family:courier; font-size:9.5pt;"></div>
+						<B>메모리 사용:</B><div id="memoryusage" style="font-family:courier; font-size:9.5pt;"></div>
 					</div>
 					<div id="info_disk" class="ui-tabs-panel">
-						<B>Disk Usage:</B><div id="diskusage" style="font-family:courier; font-size:10pt;"></div>
+						<B>디스크 사용:</B><div id="diskusage" style="font-family:courier; font-size:10pt;"></div>
 						<div id="CF_Usage" style="display:none; width: 430px">
 							<table border=0>
 								<tr>	<td><b><nobr>CompactFlash&reg; : </b></nobr></td>
