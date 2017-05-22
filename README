@@ -1,3 +1,9 @@
+Introduction In Korea
+======================
+라즈베리파이 시리즈와 그에 준하는 하드웨어를 가진 시스템만 지원하는 GUI입니다.
+	- 설치방법은 Asterisk 설치 후, RAS-OLSSOO-GUI를 설치하시면 됩니다.
+	
+
 Introduction
 ======================
 Asterisk-GUI is a framework for the creation of graphical interfaces for
