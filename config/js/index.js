@@ -344,8 +344,8 @@ var onLogInFunctions = {
 		if( stlc.match('pong') ){
 			top.log.debug('Got PONG , session is active');
 
-			$('div.ui-accordion-link:eq(0)')[0].innerHTML = '시스템 정보';
-			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = '설정을 변경하시려는 메뉴를 클릭하세요.';
+			$('div.ui-accordion-link:eq(0)')[0].innerHTML = '시스템 요약정보';
+			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = '아래의 메뉴를 클릭하시면, 설정을 변경할 수 있습니다.';
 			sessionData.isLoggedIn = true;
 			var crwp = onLogInFunctions.check_ReadWritePermissions() ;
 			if( !crwp ){ // Check if the GUI has read/write access
