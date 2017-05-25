@@ -61,15 +61,15 @@
         </div>
 
 	<table align="center" id='changePasswordForm' style='display:none;'>
-		<tr>	<td colspan="2" align='center' class='lite'><b>Change Password</b></td>
-		<tr>	<td align=right>New Password:</td>
+		<tr>	<td colspan="2" align='center' class='lite'><b>패스워드 변경</b></td>
+		<tr>	<td align=right>새로운 비밀번호:</td>
 			<td><input id="new_password" size=12 type='password' field_name='Password' validation='alphanumeric'></td>
 		</tr>
-		<tr>	<td align=right>Retype New Password:</td>
+		<tr>	<td align=right>비밀번호 확인:</td>
 			<td><input id="new_password_retype" size=12  type='password' onKeyUp="home_miscFunctions.updateOnEnter(event)"></td>
 		</tr>
 		<tr>	<td align='center' colspan='2'>
-				<span class='guiButton' onclick="updatePassword();">Update Password</span> 
+				<span class='guiButton' onclick="updatePassword();">패스워드 변경</span>
 			</td>
 		</tr>
 	</table>
@@ -182,9 +182,9 @@
 		u.new_action('update', CURRENT_Username, 'secret', newp );
 		u.callActions();
 
-		ASTGUI.feedback( { msg:"Password Updated Successfully", showfor:3 });
+		ASTGUI.feedback( { msg:"새로운 비밀번호로 변경이 완료되었습니다.", showfor:3 });
 		var t = ASTGUI.cliCommand('manager reload');
-		alert("Password Updated Successfully!!  \n\n You will now be redirected to the login page \n You must relogin using your new password") ;
+		alert("새로운 비밀번호로 변경이 완료되었습니다.!!  \n\n 잠시후 로그인 페이지로 이동합니다. \n 다시 로그인 하세요.") ;
 		var f = makeSyncRequest({ action :'logoff'});
 		parent.window.location.reload();
 	}
