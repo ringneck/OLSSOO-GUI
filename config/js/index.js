@@ -344,8 +344,8 @@ var onLogInFunctions = {
 		if( stlc.match('pong') ){
 			top.log.debug('Got PONG , session is active');
 
-			$('div.ui-accordion-link:eq(0)')[0].innerHTML = 'System Status';
-			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = 'Please click on a panel to manage related features';
+			$('div.ui-accordion-link:eq(0)')[0].innerHTML = '시스템 정보';
+			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = '설정을 변경하시려는 메뉴를 클릭하세요.';
 			sessionData.isLoggedIn = true;
 			var crwp = onLogInFunctions.check_ReadWritePermissions() ;
 			if( !crwp ){ // Check if the GUI has read/write access
@@ -378,7 +378,7 @@ var onLogInFunctions = {
 		}else{
 			top.log.error('NO active session : show login page');
 			top.log.error('ResponseText is "' + s.responseText + '"' );
-			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = 'Please login ';
+			$('div.ui-accordion-desc:eq(0)')[0].innerHTML = '로그인 하세요.';
 			sessionData.isLoggedIn = false;
 			ASTGUI.dialog.hide();
 			DOM_mainscreen.src = 'home.html';
