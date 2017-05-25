@@ -23,7 +23,7 @@
 	<!--# 한글지원-->
 	<meta charset="utf-8">
 	
-	<title>Backup / Restore Configurations</title>
+	<title>백업 / 복원 환경설정</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 
 	<link href="stylesheets/schwing.css" media="all" rel="Stylesheet" type="text/css" />
@@ -57,7 +57,7 @@
 </head>
 <body bgcolor="EFEFEF">
 	<div class="iframeTitleBar">
-		&nbsp;Backup / Restore Configurations 
+		&nbsp;백업 / 복원 환경설정
 		<span class='refresh_icon' onclick="window.location.reload();" >&nbsp;<img src="images/refresh.png" title=" Refresh " border=0 >&nbsp;</span>
 	</div>
 	<div style='display:none;' id='nocf'> You need a&nbsp;&nbsp;<b>CompactFlash&reg;</b>&nbsp;&nbsp;to use this feature </div>
@@ -68,22 +68,22 @@
 	</div>
 
 	<div id='thispageContent' style='text-align:center;'>
-		<div class='lite_Heading'>Manage Configuration Backups</div>
+		<div class='lite_Heading'>백업 환경설정</div>
 		<center>
 		<fieldset  style="font-size : 13px; width: 745px;" id='uploadForm_container'>
-			<legend><B>&nbsp;Upload a previous backup file :&nbsp;</B></legend>
+			<legend><B>&nbsp;백업파일 업로드 :&nbsp;</B></legend>
 			<IFRAME src="upload_form.html" id="uploadiframe" width="480" height="100" frameborder="0" border="0" marginheight="0" marginwidth="0"></IFRAME>
 		</fieldset>
 
-		<div  style='margin-top:20px; margin-bottom:10px;'><span class='guiButtonNew' id="takebkp" onclick='take_bkp();'>Create New Backup</span></div>
+		<div  style='margin-top:20px; margin-bottom:10px;'><span class='guiButtonNew' id="takebkp" onclick='take_bkp();'>새로운 백업생성</span></div>
 
 		<fieldset  style="font-size : 13px; height: 230px; width: 845px"  id="fieldset2">
-			<legend><B>&nbsp;List of Previous Configuration Backups :&nbsp;</B></legend>
+			<legend><B>&nbsp;백업파일 목록 :&nbsp;</B></legend>
 			<table id="table_one" cellpadding=3 cellspacing=1 border=0 align=center width=800>
 				<tr>	<td width=35>S.No</td>
-					<td width="180">Name</td>
-					<td width="125">Date</td>
-					<td align="center">Options</td>
+					<td width="180">이름</td>
+					<td width="125">날자</td>
+					<td align="center">옵션</td>
 				</tr>
 			</table>
 			<div id="bkpfilesTable_div" style="height:200px;width=100%; overflow :auto; padding : 0px 0px 0px 0px;">
