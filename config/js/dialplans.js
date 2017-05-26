@@ -47,10 +47,10 @@ var delete_DP_confirm = function(k){
 	}
 
 	if( !confirm(' Delete DialPlan ' + k.withOut(ASTGUI.contexts.CallingPlanPrefix) + '?' ) ){ return; }
-	parent.ASTGUI.dialog.waitWhile(' Applying Changes ...');
+	parent.ASTGUI.dialog.waitWhile(' 변경된 내용을 저장중입니다 ...');
 	parent.pbx.call_plans.remove(k);
 	var after = function(){
-		ASTGUI.feedback( { msg: 'deleted DialPlan !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
+		ASTGUI.feedback( { msg: '다이얼플랜이 삭제되었습니다 !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
 		parent.ASTGUI.dialog.hide();
 		window.location.reload();
 	};
@@ -66,7 +66,7 @@ var edit_DP_save_go = function(){
 	}
 
 	if (DOM_edit_dlpn_name.value.length > 70) {
-		ASTGUI.feedback({ msg: 'Dialplan name is too long. Please keep it under 70 chars.', showfor: 3, color: 'red'});
+		ASTGUI.feedback({ msg: '다이얼플랜의 이름 30자이하 이어야 합니다.', showfor: 3, color: 'red'});
 		DOM_edit_dlpn_name.focus();	
 		return;
 	}
@@ -84,11 +84,11 @@ var edit_DP_save_go = function(){
 
 	var dp = { includes: ASTGUI.domActions.get_checked(cr_chkbxClass) };
 	dp = ASTGUI.toCustomObject(dp) ;
-	parent.ASTGUI.dialog.waitWhile(' Applying Changes ...');
+	parent.ASTGUI.dialog.waitWhile(' 변경된 내용을 저장중입니다 ...');
 
 	var after = function(){
 		parent.ASTGUI.dialog.hide();
-		ASTGUI.feedback( { msg: 'DialPlan updated !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
+		ASTGUI.feedback( { msg: '다이얼플랜이 업데이트되었습니다 !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
 		window.location.reload();
 	};
 
@@ -119,14 +119,14 @@ var edit_DP_save_go = function(){
 
 var resetEditForm = function(){
 	if(isNewDP){
-		_$('Edit_dialog_title').innerHTML = 'Create New DialPlan';
+		_$('Edit_dialog_title').innerHTML = '새로운 다이얼플랜 생성';
 		ASTGUI.domActions.unCheckAll( cr_chkbxClass );
 		ASTGUI.domActions.checkSelected( cr_chkbxClass, ASTGUI.includeContexts ) ;
 		DOM_edit_dlpn_name.value = parent.pbx.call_plans.nextAvailable() ;
 		return ;
 	}
 
-	_$('Edit_dialog_title').innerHTML = 'Edit DialPlan ' ;
+	_$('Edit_dialog_title').innerHTML = '다이얼플랜 수정 ' ;
 	DOM_edit_dlpn_name.value = EDIT_DP.withOut(ASTGUI.contexts.CallingPlanPrefix);
 	var theseRules = ASTGUI.cloneObject( parent.sessionData.pbxinfo.callingPlans[EDIT_DP].includes ) ;
 		// We really do not need to cloneObject() here
