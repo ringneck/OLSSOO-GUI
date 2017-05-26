@@ -483,7 +483,7 @@ var onLogInFunctions = {
 	},
 
 	run_detectdahdi : function(){ // onLogInFunctions.run_detectdahdi()
-		ASTGUI.dialog.waitWhile('detecting Hardware ..');
+		ASTGUI.dialog.waitWhile('하드웨어를 검색중입니다..');
 
 		ASTGUI.systemCmdWithOutput( sessionData.directories.script_detectdahdi , function(op){
 			op = op.toLowerCase();
@@ -740,13 +740,13 @@ var miscFunctions = {
 					ifno:function(){
 						miscFunctions.logoutFunction.doLogout();
 					},
-					title : 'Apply changes before logout ?',
+					title : '로그아웃 하기전에 저장을 하시겠습니까 ?',
 					btnYes_text :'Yes',
 					btnNo_text : 'No'
 				});
 
 			}else{
-				if(!confirm("Are you sure you want to logout ?")) { return true; }
+				if(!confirm("로그아웃을 하시겠습니까 ?")) { return true; }
 				this.doLogout();
 			}
 		},
@@ -1164,6 +1164,6 @@ var after_localajaxinit = function(){
 		}
 	};
 
-	ASTGUI.dialog.waitWhile(' Loading ...');
+	ASTGUI.dialog.waitWhile(' 로딩중입니다...');
 	setTimeout( loadGUI , 300 );
 };
