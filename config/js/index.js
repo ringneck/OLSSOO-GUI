@@ -354,7 +354,7 @@ var onLogInFunctions = {
 				return;
 			}
 			if( crwp == 'postmappings_updated' ){
-				parent.ASTGUI.dialog.waitWhile(' reloading asterisk ... ');
+				parent.ASTGUI.dialog.waitWhile(' 엔진이 리로드중입니다... ');
 				var t = ASTGUI.cliCommand('reload') ;
 				setTimeout( function(){ 
 					if (ASTGUI.version.gteq("1.6.0")) {
@@ -712,7 +712,7 @@ var miscFunctions = {
 		}
 		u.style.display = 'none';
 		top.cookies.remove('configFilesChanged');
-		ASTGUI.feedback({msg:'Asterisk Reloaded !!', showfor: 3 , color: '#5D7CBA', bgcolor: '#FFFFFF'}) ;
+		ASTGUI.feedback({msg:'엔진이 리로드되었습니다 !!', showfor: 3 , color: '#5D7CBA', bgcolor: '#FFFFFF'}) ;
 
 		if(sessionData.PLATFORM.isAA50 ){
 			//TODO - Save Changes
