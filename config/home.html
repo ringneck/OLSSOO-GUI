@@ -118,7 +118,7 @@
 		var f = makeSyncRequest({ action :'login', username: DOM_username.value, secret: DOM_secret.value });
 		f = f.toLowerCase();
 		if(f.match('authentication accepted')){
-			top.log.debug("Login Success result: " + f);
+			top.log.debug("로그인이 되었습니다. result: " + f);
 			setLoggedIn( { welcome_redirect: false } );
 			DOM_secret.blur();
 			parent.ASTGUI.dialog.waitWhile(' <font color=#005119><b>Login Success</b></font>');
@@ -138,7 +138,7 @@
 			}
 			return;
 		}else if(f.match('authentication failed') ) {
-			top.log.debug("Login failure result: " + f);
+			top.log.debug("로그인에 실패했습니다. result: " + f);
 			ASTGUI.feedback({msg:'Invalid Username or Password', showfor: 4, color:'#c42421'}) ;
 			DOM_secret.focus();
 			DOM_secret.select();
