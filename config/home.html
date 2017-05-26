@@ -122,7 +122,7 @@
 			setLoggedIn( { welcome_redirect: false } );
 			DOM_secret.blur();
 			parent.ASTGUI.dialog.waitWhile(' <font color=#005119><b>Login Success</b></font>');
-			ASTGUI.feedback({msg:'Login Success', showfor: 4 , color: '#5D7CBA', bgcolor: '#FFFFFF'}) ;
+			ASTGUI.feedback({msg:'로그인이 되었습니다.', showfor: 4 , color: '#5D7CBA', bgcolor: '#FFFFFF'}) ;
 			top.cookies.set('username', DOM_username.value );
 
 			if( DOM_secret.value == 'password'){
@@ -139,7 +139,7 @@
 			return;
 		}else if(f.match('authentication failed') ) {
 			top.log.debug("로그인에 실패했습니다. result: " + f);
-			ASTGUI.feedback({msg:'Invalid Username or Password', showfor: 4, color:'#c42421'}) ;
+			ASTGUI.feedback({msg:'로그인 정보가 다릅니다.', showfor: 4, color:'#c42421'}) ;
 			DOM_secret.focus();
 			DOM_secret.select();
 		}
