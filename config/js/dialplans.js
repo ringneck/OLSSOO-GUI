@@ -46,7 +46,7 @@ var delete_DP_confirm = function(k){
 		}
 	}
 
-	if( !confirm(' Delete DialPlan ' + k.withOut(ASTGUI.contexts.CallingPlanPrefix) + '?' ) ){ return; }
+	if( !confirm('정말' + k.withOut(ASTGUI.contexts.CallingPlanPrefix) + '을 삭제하시겠습니까 ?' ) ){ return; }
 	parent.ASTGUI.dialog.waitWhile(' 변경된 내용을 저장중입니다 ...');
 	parent.pbx.call_plans.remove(k);
 	var after = function(){
