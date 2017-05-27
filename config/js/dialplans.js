@@ -41,12 +41,12 @@ var delete_DP_confirm = function(k){
 	var ul = parent.pbx.users.list();
 	for( var f=0 ; f < ul.length ; f++ ){
 		if( parent.sessionData.pbxinfo.users[ ul[f] ].getProperty('context') == k ){
-			ASTGUI.feedback( { msg:'Can not delete dialplan !<BR> The selected Dial Plan is in use by one or more users.', showfor:3, color:'red' } );
+			ASTGUI.feedback( { msg:'다이얼플랜을 삭제할 수 없습니다. !<BR> 현재 삭제할 다이얼플랜이 사용중인지 확인하세요.', showfor:3, color:'red' } );
 			return;
 		}
 	}
 
-	if( !confirm('정말' + k.withOut(ASTGUI.contexts.CallingPlanPrefix) + '을 삭제하시겠습니까 ?' ) ){ return; }
+	if( !confirm('정말 ' + k.withOut(ASTGUI.contexts.CallingPlanPrefix) + '을 삭제하시겠습니까 ?' ) ){ return; }
 	parent.ASTGUI.dialog.waitWhile(' 변경된 내용을 저장중입니다 ...');
 	parent.pbx.call_plans.remove(k);
 	var after = function(){
@@ -76,7 +76,7 @@ var edit_DP_save_go = function(){
 	if( isNewDP ){ // check if there is already a DialPlan by this name
 		var tmp_dps = parent.pbx.call_plans.list() ;
 		if( tmp_dps.contains( ASTGUI.contexts.CallingPlanPrefix + dp_name ) ){
-			ASTGUI.feedback( { msg:' DialPlan name already in use ! <BR> Please choose another name.', showfor: 3, color:'red' } );
+			ASTGUI.feedback( { msg:' 다이얼플랜 이름이 이미 사용중입니다. ! <BR> 다시 입력해 주세요.', showfor: 3, color:'red' } );
 			DOM_edit_dlpn_name.focus();
 			return;
 		}
@@ -139,7 +139,7 @@ var resetEditForm = function(){
 var set_thisDP_as_default = function(a){
 	ASTGUI.updateaValue({ file: ASTGUI.globals.configfile, context :'general', variable :'default_dialplan', value : a });
 	parent.sessionData.GUI_PREFERENCES.default_dialplan = a;
-	ASTGUI.feedback( { msg: 'Updated default DialPlan !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
+	ASTGUI.feedback( { msg: '기본 다이얼플랜으로 업데이트되었습니다 !', showfor: 2 , color: 'blue', bgcolor: '#FFFFFF' } );
 	window.location.reload();
 };
 
@@ -189,7 +189,7 @@ var load_CallingPlansTable = function(){
 			ASTGUI.domActions.clear_table(DOM_table_DialPlans_list);
 			var newRow = DOM_table_DialPlans_list.insertRow(-1);
 			newRow.className = 'even';
-			addCell( newRow , { html:'No DialPlans defined !!'} );
+			addCell( newRow , { html:'설정된 다이얼플랜이 없습니다. !!'} );
 			return ;
 		}
 	})();
@@ -230,7 +230,7 @@ var load_callingRules_checkboxes = function(){
 
 
 function localajaxinit(){
-	top.document.title = 'Manage Dialplans' ;
+	top.document.title = '다이얼플랜 설정' ;
 	// show list of dialplans
 	// - each dialplan is a set of calling rules
 	// OnEdit show Checkboxes - which are ticked
