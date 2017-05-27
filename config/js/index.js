@@ -278,7 +278,7 @@ var onLogInFunctions = {
 			return;
 		}
 
-		ASTGUI.dialog.waitWhile('Checking write permission for gui folder');
+		ASTGUI.dialog.waitWhile('GUI 폴더의 권한을 체크하고 있습니다.');
 		var rand_1 = Math.round(100000*Math.random());
 		ASTGUI.systemCmdWithOutput( 'echo ' + rand_1  , function(s){
 			if( !s.contains(rand_1) ){
