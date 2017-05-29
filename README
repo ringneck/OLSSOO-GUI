@@ -2,7 +2,29 @@ Introduction In Korea
 ======================
 라즈베리파이 시리즈와 그에 준하는 하드웨어를 가진 시스템만 지원하는 GUI입니다.
 	- 설치방법은 Asterisk 설치 후, RAS-OLSSOO-GUI를 설치하시면 됩니다.
-	
+
+설치방법은 아래주소를 참고하세요 (#5 부분에서 GUI 소스 다운로드시 이 곳 RAS-OLSSOO-GUI를 선택하시면 한글프로젝트가 다운됩니다.)
+
+root#cd /usr/src
+root#git clone 
+root#cd olssoo
+이 후 컴파일 방법은 문서와 동일합니다.
+
+라즈베리 파이를 전화서버로 활용하는 최적의 방법 #1	
+http://cafe.naver.com/asterisker/8896
+
+라즈베리 파이를 전화서버로 활용하는 최적의 방법 #2	
+http://cafe.naver.com/asterisker/8897
+
+라즈베리 파이를 전화서버로 활용하는 최적의 방법 #3	
+http://cafe.naver.com/asterisker/8898
+
+라즈베리 파이를 전화서버로 활용하는 최적의 방법 #4	
+http://cafe.naver.com/asterisker/8899
+
+라즈베리 파이를 전화서버로 활용하는 최적의 방법 #5	
+http://cafe.naver.com/asterisker/8900
+
 	
 [PBX(교환기 or 키폰) 구축 및 운영]
 ===========================
