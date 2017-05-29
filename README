@@ -5,10 +5,12 @@ Introduction In Korea
 
 설치방법은 아래주소를 참고하세요 (#5 부분에서 GUI 소스 다운로드시 이 곳 RAS-OLSSOO-GUI를 선택하시면 한글프로젝트가 다운됩니다.)
 
+[한글 GUI 다운로드]
 root#cd /usr/src
-root#git clone 
+root#git clone https://github.com/ringneck/RAS-OLSSOO-GUI.git olssoo
 root#cd olssoo
-이 후 컴파일 방법은 문서와 동일합니다.
+이 후 컴파일 방법은 #5번 문서와 동일합니다.
+
 
 라즈베리 파이를 전화서버로 활용하는 최적의 방법 #1	
 http://cafe.naver.com/asterisker/8896
